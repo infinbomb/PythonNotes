@@ -8,7 +8,6 @@ func2 = lambda x: x+1
 print(func(1))
 print(func2(1))
 
-
 # 1 parameter
 def func3(x):
     func4 = lambda x: x+1
