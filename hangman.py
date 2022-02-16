@@ -1,6 +1,4 @@
 from random_word import RandomWords
-from drawings import *
-
 
 def generate_word():
     r = RandomWords()
@@ -90,3 +88,5 @@ if win:
     print("\nWOOOO BABY!!!!!!!")
 else:
     print("\nNoob")
+    
+# redo the drawings
