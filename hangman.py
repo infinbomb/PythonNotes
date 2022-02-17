@@ -1,5 +1,6 @@
 from random_word import RandomWords
 
+
 def generate_word():
     r = RandomWords()
     return r.get_random_word()
@@ -89,7 +90,108 @@ if win:
 else:
     print("\nNoob")
     
-# redo the drawings
-
-
-
+    
+def start():
+    print("  -------------")
+    print(" |            |")
+    print(" |            |")
+    print(" |          ")
+    print(" |         ")
+    print(" |         ")
+    print("___")
+def one():
+    print("  -------------")
+    print(" |            |")
+    print(" |            |")
+    print(" |           ___")
+    print(" |          |   |")
+    print(" |           ---")
+    print("___")
+def two():
+    print("  -------------")
+    print(" |            |")
+    print(" |            |")
+    print(" |           ____")
+    print(" |          |.   |")
+    print(" |          |    |")
+    print("___          ---- ")
+def three():
+    print("  -------------")
+    print(" |            |")
+    print(" |            |")
+    print(" |           ____ ")
+    print(" |          |.  .|")
+    print(" |          |    |")
+    print("___          ---- ")
+def four():
+    print("  -------------")
+    print(" |            |")
+    print(" |            |")
+    print(" |           ____ ")
+    print(" |          |.  .|")
+    print(" |          | __ |")
+    print("___          ---- ")
+def five():
+    print("  -------------")
+    print(" |            |")
+    print(" |            |")
+    print(" |           ____ ")
+    print(" |          |.  .|")
+    print(" |          | __ |")
+    print("___          ---- ")
+    print("               |")
+    print("               |")
+    print("               |")
+def six():
+    print("  -------------")
+    print(" |            |")
+    print(" |            |")
+    print(" |           ____ ")
+    print(" |          |.  .|")
+    print(" |          | __ |")
+    print("___          ---- ")
+    print("             \ | ")
+    print("              \|")
+    print("               |")
+def seven():
+    print("  -------------")
+    print(" |            |")
+    print(" |            |")
+    print(" |           ____ ")
+    print(" |          |.  .|")
+    print(" |          | __ |")
+    print("___          ---- ")
+    print("             \ | /")
+    print("              \|/")
+    print("               |")
+def eight():
+    print("  -------------")
+    print(" |            |")
+    print(" |            |")
+    print(" |           ____ ")
+    print(" |          |.  .|")
+    print(" |          | __ |")
+    print("___          ---- ")
+    print("             \ | /")
+    print("              \|/")
+    print("               |")
+    print("              /   ")
+    print("             /    ")
+    print("ONE CHANCE LEFT! GLHF")
+def game_over():
+    print("  -------------")
+    print(" |            |")
+    print(" |            |")
+    print(" |           ____ ")
+    print(" |          |.  .|")
+    print(" |          | __ |")
+    print("___          ---- ")
+    print("             \ | /")
+    print("              \|/")
+    print("               |")
+    print("              /   ")
+    print("             /    ")
+    print("ONE CHANCE LEFT! GLHF")
+    
+    
+    
