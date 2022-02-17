@@ -1,5 +1,5 @@
 from random_word import RandomWords
-
+from drawings import *
 
 def generate_word():
     r = RandomWords()
@@ -12,6 +12,7 @@ def start_game():
     used_letters = [] # stores ALL letters guessed
     num_mistakes = 0
     is_complete = False
+    letters = "qwertyuiopasdfghjklzxcvbnm"
     print(word)
 
     print("Your word is " + str(len(word)) + " words long.")
@@ -19,17 +20,17 @@ def start_game():
     for space in current_status: # prints the current status
         print(space, end=" ")
 
-    while num_mistakes < 9 and not is_complete:
-        guessed_letter = input(print("\nPlease enter a letter: "))
+    while num_mistakes < 10 and not is_complete:
+        guessed_letter = (input(print("\nPlease enter a letter: "))).lower()
 
-        if guessed_letter not in used_letters:
+        if guessed_letter not in used_letters and guessed_letter in letters:
             used_letters.append(guessed_letter)
             if guessed_letter in word:
                 for x in range(0, len(word)):
                     if word[x] == guessed_letter:
                         current_status[x] = guessed_letter # set the corresponding index to the letter
                 print(" ")
-                print(print_hangman(num_mistakes, current_status, used_letters, True))
+                print_hangman(num_mistakes, current_status, used_letters, True)
 
                 num_correct = 0
                 for let in current_status:
@@ -42,11 +43,15 @@ def start_game():
                 print("That was not in the word!")
                 num_mistakes += 1
                 print(" ")
-                print(print_hangman(num_mistakes, current_status, used_letters, False))
+                print_hangman(num_mistakes, current_status, used_letters, False)
         else:
-            print("You already used that letter! Dumbass")
+            print("You already used this letter or it is not a letter :( ")
 
+    if num_mistakes == 0: 
+        print("You're a master!")
+        
     return is_complete
+
 def print_hangman(mistakes, status, used_letters, correct):
     if mistakes == 1:
         one()
@@ -81,117 +86,14 @@ def print_hangman(mistakes, status, used_letters, correct):
         return "Good Job!"
     else:
         return "Try Again!"
-    return ""
 
 print("Lets Play HangMan!")
+
 win = start_game()
+
 if win:
     print("\nWOOOO BABY!!!!!!!")
 else:
-    print("\nNoob")
-    
-    
-def start():
-    print("  -------------")
-    print(" |            |")
-    print(" |            |")
-    print(" |          ")
-    print(" |         ")
-    print(" |         ")
-    print("___")
-def one():
-    print("  -------------")
-    print(" |            |")
-    print(" |            |")
-    print(" |           ___")
-    print(" |          |   |")
-    print(" |           ---")
-    print("___")
-def two():
-    print("  -------------")
-    print(" |            |")
-    print(" |            |")
-    print(" |           ____")
-    print(" |          |.   |")
-    print(" |          |    |")
-    print("___          ---- ")
-def three():
-    print("  -------------")
-    print(" |            |")
-    print(" |            |")
-    print(" |           ____ ")
-    print(" |          |.  .|")
-    print(" |          |    |")
-    print("___          ---- ")
-def four():
-    print("  -------------")
-    print(" |            |")
-    print(" |            |")
-    print(" |           ____ ")
-    print(" |          |.  .|")
-    print(" |          | __ |")
-    print("___          ---- ")
-def five():
-    print("  -------------")
-    print(" |            |")
-    print(" |            |")
-    print(" |           ____ ")
-    print(" |          |.  .|")
-    print(" |          | __ |")
-    print("___          ---- ")
-    print("               |")
-    print("               |")
-    print("               |")
-def six():
-    print("  -------------")
-    print(" |            |")
-    print(" |            |")
-    print(" |           ____ ")
-    print(" |          |.  .|")
-    print(" |          | __ |")
-    print("___          ---- ")
-    print("             \ | ")
-    print("              \|")
-    print("               |")
-def seven():
-    print("  -------------")
-    print(" |            |")
-    print(" |            |")
-    print(" |           ____ ")
-    print(" |          |.  .|")
-    print(" |          | __ |")
-    print("___          ---- ")
-    print("             \ | /")
-    print("              \|/")
-    print("               |")
-def eight():
-    print("  -------------")
-    print(" |            |")
-    print(" |            |")
-    print(" |           ____ ")
-    print(" |          |.  .|")
-    print(" |          | __ |")
-    print("___          ---- ")
-    print("             \ | /")
-    print("              \|/")
-    print("               |")
-    print("              /   ")
-    print("             /    ")
-    print("ONE CHANCE LEFT! GLHF")
-def game_over():
-    print("  -------------")
-    print(" |            |")
-    print(" |            |")
-    print(" |           ____ ")
-    print(" |          |.  .|")
-    print(" |          | __ |")
-    print("___          ---- ")
-    print("             \ | /")
-    print("              \|/")
-    print("               |")
-    print("              /   ")
-    print("             /    ")
-    print("ONE CHANCE LEFT! GLHF")
-    
+    print("\nMaybe Next Time")
     
     
