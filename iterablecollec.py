@@ -46,3 +46,7 @@ ezlist = [x for x in fruits]
 upperlist = [x.upper() for x in fruits]
 replacelist = [x if x != "banana" else "orange" for x in fruits]
 
+newList = ["Chicken", "Beef", "Pork"]
+changelist = [x if x != "Chicken" else "Frog" for x in newList]
+print(newList)
+print(changelist)
