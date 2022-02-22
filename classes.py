@@ -3,16 +3,24 @@ class MyClass():
         self.numStudents = numStudents
         self.grade = grade
     
-    def myfunc(self):
+    def class_description(self):
         print("Your class has " + str(self.numStudents) + " students")
         
-    def graduate():
-        grade = 13
-        
-    def 
+class Person(MyClass):
+    pass 
+
+class Senior(MyClass):
+    def __init__(self, name, age, college): 
+    # this will override Parent class initialization
+        self.name = name
+        self.age = age
+        self.college = college
         
 p1 = MyClass(5, 12)
-p1.myfunc()
+p1.class_description()
 
-del p1
+p2 = Person(4, 11)
+print(p2.grade)
 
+p3 = Senior("Charles", 12, "Cornell University")
+print(p3.college)
