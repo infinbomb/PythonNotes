@@ -40,7 +40,14 @@ print(x(1, 6, 3))
 def anotherFunc():
     global a
     a = 1
+    global myList
+    myList = [1, 2, 3, 4, 5, 6, 7]
     # You must put global before devlaring the variable
     
 anotherFunc()
 print(a + 10)
+
+# You can even change variables initiated in a function
+myList.append(8)
+print(myList[7])
+
