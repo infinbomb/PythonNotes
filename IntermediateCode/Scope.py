@@ -31,3 +31,16 @@ def someFunc():
 someFunc()
 x = 3
 print(x)
+
+x = lambda a, b, c: a * b // c
+print(x(1, 6, 3))
+# Here, "x" is a lambda function, so it can have the same name
+
+# If you want to use a variable outside scope, use keyword "global"
+def anotherFunc():
+    global a
+    a = 1
+    # You must put global before devlaring the variable
+    
+anotherFunc()
+print(a + 10)
