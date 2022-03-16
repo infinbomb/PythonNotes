@@ -20,7 +20,7 @@ def start_game():
     for space in current_status: # prints the current status
         print(space, end=" ")
 
-    while num_mistakes < 10 and not is_complete:
+    while num_mistakes < 9 and not is_complete:
         guessed_letter = (input("\nPlease enter a letter: ")).lower()
 
         if guessed_letter not in used_letters and guessed_letter in letters:
@@ -29,24 +29,31 @@ def start_game():
                 for x in range(0, len(word)):
                     if word[x] == guessed_letter:
                         current_status[x] = guessed_letter # set the corresponding index to the letter
-                print(" ")
+                
                 print_hangman(num_mistakes, current_status, used_letters, True)
-
+                # seperate function to print the hangman and progress
                 num_correct = 0
                 for let in current_status:
                     if let != "_":
-                        num_correct += 1 # if there is still a _ in the status, no win yet
+                        num_correct += 1 
+                # if there is still a _ in the status, no win yet
                 if num_correct == len(word):
                     is_complete = True
                     break
             else:
-                print("That was not in the word!")
+                print("That was not in the word!\n")
                 num_mistakes += 1
-                print(" ")
+                print("Num Mistakes: " + str(num_mistakes))
                 print_hangman(num_mistakes, current_status, used_letters, False)
+                
+                if num_mistakes == 9:
+                    is_complete = False
+                    break
         else:
-            print("You already used this letter or it is not a letter :( ")
+            print("You already used this letter or it is not a letter :( \n")
+        
 
+        
     if num_mistakes == 0: 
         print("You're a master!")
         
@@ -94,6 +101,7 @@ win = start_game()
 if win:
     print("\nWOOOO BABY!!!!!!!")
 else:
-    print("\nMaybe Next Time")
+    print("\nMaybe Next Time.")
+    print("GOOD GAME ;(")
     
     
