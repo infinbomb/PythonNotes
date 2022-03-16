@@ -96,9 +96,9 @@ def game_over():
     print("             \ | /")
     print("              \|/")
     print("               |")
-    print("              /   ")
-    print("             /    ")
-    print("ONE CHANCE LEFT! GLHF")
+    print("              / \  ")
+    print("             /   \ ")
+
     
     
     

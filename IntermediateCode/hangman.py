@@ -21,7 +21,7 @@ def start_game():
         print(space, end=" ")
 
     while num_mistakes < 10 and not is_complete:
-        guessed_letter = (input(print("\nPlease enter a letter: "))).lower()
+        guessed_letter = (input("\nPlease enter a letter: ")).lower()
 
         if guessed_letter not in used_letters and guessed_letter in letters:
             used_letters.append(guessed_letter)

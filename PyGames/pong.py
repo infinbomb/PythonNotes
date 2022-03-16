@@ -5,7 +5,7 @@ WIDTH, HEIGHT = 700, 500 # Sets window size
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Pong") # Sets title of window
 
-FPS = 60 # game will run at 60 no matter the device
+FPS = 144 # game will run at 60 no matter the device
 
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
@@ -19,7 +19,7 @@ WINNING_SCORE = 10
 
 class Paddle:
     COLOR = WHITE
-    VEL = 4
+    VEL = 7
     
     def __init__(self, x, y, width, height):
         self.x = self.original_x = x
@@ -42,7 +42,7 @@ class Paddle:
         self.y = self.original_y
 
 class Ball:
-    MAX_VEL = 5
+    MAX_VEL = 13.2
     COLOR = WHITE
 
     def __init__(self, x, y, radius):

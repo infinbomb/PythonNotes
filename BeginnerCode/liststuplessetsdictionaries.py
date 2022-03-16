@@ -20,4 +20,4 @@ print(changeList)
 upperList = [x.upper() for x in thislist]
 print(upperList)
 
-newList = [x if != "BANANA" else "BERRY" for x in upperList]
+newList = []
