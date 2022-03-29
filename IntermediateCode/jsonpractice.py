@@ -22,3 +22,8 @@ print(json.dumps({"name": "John", "age": 30}))
 print(json.dumps(["apple", "orange"]))
 print(json.dumps(("apple", "bananas")))
 
+#We can format using built in json dump functions
+print(json.dumps(myDic, indent = 1, separators = (",", " = ")))
+
+#Use sort_keys to order alphabetically
+print(json.dumps(myDic, indent = 1, sort_keys = True))

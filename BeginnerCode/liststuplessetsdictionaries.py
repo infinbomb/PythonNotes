@@ -2,6 +2,8 @@
 myList = ["Charles", "Darren", "Karen", "Karen"]
 # Lists allow duplicate items
 print(len(myList))
+myList.append("Asian")
+print(myList)
 
 #Lists also allow for different data types
 randomList = ["Charles", 18, True]

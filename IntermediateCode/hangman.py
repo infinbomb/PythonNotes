@@ -13,7 +13,7 @@ def start_game():
     num_mistakes = 0
     is_complete = False
     letters = "qwertyuiopasdfghjklzxcvbnm"
-    print(word)
+    print(word) # Delete this, just for testing 
 
     print("Your word is " + str(len(word)) + " words long.")
 
@@ -28,7 +28,8 @@ def start_game():
             if guessed_letter in word:
                 for x in range(0, len(word)):
                     if word[x] == guessed_letter:
-                        current_status[x] = guessed_letter # set the corresponding index to the letter
+                        current_status[x] = guessed_letter 
+                        # set the corresponding index to the letter
                 
                 print_hangman(num_mistakes, current_status, used_letters, True)
                 # seperate function to print the hangman and progress
